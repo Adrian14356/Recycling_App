@@ -3,25 +3,36 @@
 {% load crispy_forms_tags %}
 {% block content %}
 {% block css %}
- <link rel="stylesheet" type="text/css" href="{% static 'users/login.css' %}" />
+ <link rel="stylesheet" type="text/css" href="{% static 'users/register.css' %}" />
 {% endblock %}
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
+<body>
 
-            <fieldset content="form-group">
-                <legend class="border-bottom-md-5">Log In!</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-outline mb-4">
-                <button class="btn btn-outline-info" type="submit">Login</button>
-            </div>
-        </form>
-        <div class="form-outline mb-4">
-            <small class="text-muted">
-                Doesn't have account? <a class="ml-2" href="{% url 'register' %}"> Sign Up</a>
-            </small>
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+<form method="POST">
+{% csrf_token %}
+            <h1 class='text-white'>Login</h1>
+
+              <div class="form-login"></br>
+                </br>
+                    <input type="text"  name="username" class="form-control input-sm chat-input" placeholder="username"/>
+                </br></br>
+              </div>
+
+                      <div class="form-group" >
+                        <input type="password"  name="password" class="form-control input-sm chat-input" placeholder="password"/>
+                      </div>
+
+                </br></br>
+                 <div class="form-group">
+                    <button class="btn btn-danger btn-md" type="submit">Sign In!</button>
+                </div>
+</form>
+        </div>
         </div>
     </div>
-
+</body>
 {% endblock %}
