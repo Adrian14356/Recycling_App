@@ -1,15 +1,10 @@
-
 body {
- background-image: url("core_images/home.jpg");
+ background-image: url("core_images/home_photo.jpg");
  background-color: #cccccc;
  background-position: 10% 10%;
-  background-size: cover;
-  height: 10px;
- width: 500px;
+ background-size: cover;
  }
 
 .search {
-    right: 100px;
-    bottom: 10px;
-    padding: 10px;
+padding: 15em 0px 10px 100px;
 }

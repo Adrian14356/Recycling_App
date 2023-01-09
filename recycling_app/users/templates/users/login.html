@@ -3,45 +3,36 @@
 {% load crispy_forms_tags %}
 {% block content %}
 {% block css %}
- <link rel="stylesheet" type="text/css" href="{% static 'users/login.css' %}" />
+ <link rel="stylesheet" type="text/css" href="{% static 'users/register.css' %}" />
 {% endblock %}
 <body>
-<form method="POST">
-{% csrf_token %}
+
 <!-- Page Content -->
 <div class="container">
 
     <div class="row">
         <div class="col-md-offset-5 col-md-4 text-center">
-
-            <h1 class='text-white'>Register</h1>
+<form method="POST">
+{% csrf_token %}
+            <h1 class='text-white'>Login</h1>
 
               <div class="form-login"></br>
                 </br>
-                    <input type="text" id="username" name="username" class="form-control input-sm chat-input" placeholder="username"/>
+                    <input type="text"  name="username" class="form-control input-sm chat-input" placeholder="username"/>
                 </br></br>
               </div>
 
-                </br></br>
-                      </br>
-
-                      <div class="form-group">
-                        <input type="text" id="password" name="password1" class="form-control input-sm chat-input" placeholder="password"/>
+                      <div class="form-group" >
+                        <input type="password"  name="password" class="form-control input-sm chat-input" placeholder="password"/>
                       </div>
 
                 </br></br>
                  <div class="form-group">
-                <button class="btn btn-danger btn-md" type="submit">Sign Up!</button>
+                    <button class="btn btn-danger btn-md" type="submit">Sign In!</button>
                 </div>
-
-                  <div class="border-top pt-3">
-                <button class="btn btn-danger btn-md" href="{% url 'login' %}">Sign In!</button>
-            </div>
-
+</form>
         </div>
         </div>
     </div>
-    </br></br></br>
-</form>
 </body>
 {% endblock %}

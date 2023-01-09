@@ -6,46 +6,46 @@
  <link rel="stylesheet" type="text/css" href="{% static 'users/register.css' %}" />
 {% endblock %}
 <body>
-<form method="POST">
-{% csrf_token %}
+
 <!-- Page Content -->
 <div class="container">
 
     <div class="row">
         <div class="col-md-offset-5 col-md-4 text-center">
-
+<form method="POST">
+{% csrf_token %}
             <h1 class='text-white'>Register</h1>
 
               <div class="form-login"></br>
                 </br>
-                    <input type="text" id="username" name="username" class="form-control input-sm chat-input" placeholder="username"/>
+                    <input type="text"  name="username" class="form-control input-sm chat-input" placeholder="Username"/>
                 </br></br>
               </div>
 
                   <div class="form-login"></br>
-                    <input type="email" id="email" name="email" class="form-control input-sm chat-input" placeholder="email"/>
+                    <input type="email"  name="email" class="form-control input-sm chat-input" placeholder="Email"/>
                   </div>
 
                 </br></br>
                       </br>
 
-                      <div class="form-group">
-                        <input type="text" id="password" name="password1" class="form-control input-sm chat-input" placeholder="password"/>
+                      <div class="form-group" >
+                        <input type="password"  name="password1" class="form-control input-sm chat-input" placeholder="Password"/>
                       </div>
 
                 </br></br>
                  <div class="form-group">
-                <button class="btn btn-danger btn-md" type="submit">Sign Up!</button>
+                    <button class="btn btn-danger btn-md" type="submit">Sign Up!</button>
                 </div>
 
                   <div class="border-top pt-3">
                 <button class="btn btn-danger btn-md" href="{% url 'login' %}">Sign In!</button>
-            </div>
-
+                    </div>
+</form>
         </div>
         </div>
     </div>
     </br></br></br>
-</form>
+
 </body>
 {% endblock %}
