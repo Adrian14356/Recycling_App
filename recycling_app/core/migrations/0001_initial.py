@@ -8,24 +8,28 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Bucket',
+            name="Bucket",
             fields=[
-                ('id', models.IntegerField(primary_key=True, serialize=False)),
-                ('bucket_name', models.CharField(max_length=15)),
+                ("id", models.IntegerField(primary_key=True, serialize=False)),
+                ("bucket_name", models.CharField(max_length=15)),
             ],
         ),
         migrations.CreateModel(
-            name='Trashes',
+            name="Trashes",
             fields=[
-                ('id', models.IntegerField(primary_key=True, serialize=False)),
-                ('trash_name', models.CharField(max_length=50)),
-                ('description', models.CharField(max_length=100)),
-                ('bucket', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.bucket')),
+                ("id", models.IntegerField(primary_key=True, serialize=False)),
+                ("trash_name", models.CharField(max_length=50)),
+                ("description", models.CharField(max_length=100)),
+                (
+                    "bucket",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="core.bucket"
+                    ),
+                ),
             ],
         ),
     ]

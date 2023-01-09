@@ -5,11 +5,15 @@ from django.views.generic import CreateView
 
 
 def home(request):
-    return render(request, 'core/home.html', {'title' : 'Home', 'posts' : Bucket.objects.all() })
+    return render(
+        request, "core/home.html", {"title": "Home", "posts": Bucket.objects.all()}
+    )
+
 
 class BucketListView(ListView):
     model = Bucket
     template_name = "core/home.html"
+
 
 class TrashAddView(CreateView):
     model = Trash
@@ -19,13 +23,7 @@ class TrashAddView(CreateView):
     def post(self, request, *args, **kwargs):
         pass
 
+
 class TrashSearchView(ListView):
     model = Trash
     template_name = "core/home.html"
-
-    #def post(self, request, *args, **kwargs):
-
-        #form = request.GET.get("trash_name")
-
-        #if form is not None:
-         #   messages.success(f"You need to put {} to {Bucket.bucket_name}")

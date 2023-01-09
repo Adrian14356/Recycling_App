@@ -1,11 +1,20 @@
-from .forms import UserRegistrationForm
+from .forms import UserRegistrationForm, UserLoginForm
 from django.views.generic.edit import CreateView
+from django.contrib.auth.views import LoginView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
+
 
 class RegisterView(CreateView, SuccessMessageMixin):
 
     template_name = "users/register.html"
     success_url = reverse_lazy("login")
     form_class = UserRegistrationForm
-    success_message = ("You have been successful signed up!")
+    success_message = "You have been successful signed up!"
+
+class LoginUserView(LoginView):
+
+    template_name = "users/login.html"
+    success_url = reverse_lazy("home")
+    form_class = UserLoginForm
+    success_message = "You have been successful sign in !"

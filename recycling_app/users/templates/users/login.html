@@ -5,23 +5,43 @@
 {% block css %}
  <link rel="stylesheet" type="text/css" href="{% static 'users/login.css' %}" />
 {% endblock %}
-    <div class="content-section">
-        <form method="POST">
-            {% csrf_token %}
+<body>
+<form method="POST">
+{% csrf_token %}
+<!-- Page Content -->
+<div class="container">
 
-            <fieldset content="form-group">
-                <legend class="border-bottom-md-5">Log In!</legend>
-                {{ form|crispy }}
-            </fieldset>
-            <div class="form-outline mb-4">
-                <button class="btn btn-outline-info" type="submit">Login</button>
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+
+            <h1 class='text-white'>Register</h1>
+
+              <div class="form-login"></br>
+                </br>
+                    <input type="text" id="username" name="username" class="form-control input-sm chat-input" placeholder="username"/>
+                </br></br>
+              </div>
+
+                </br></br>
+                      </br>
+
+                      <div class="form-group">
+                        <input type="text" id="password" name="password1" class="form-control input-sm chat-input" placeholder="password"/>
+                      </div>
+
+                </br></br>
+                 <div class="form-group">
+                <button class="btn btn-danger btn-md" type="submit">Sign Up!</button>
+                </div>
+
+                  <div class="border-top pt-3">
+                <button class="btn btn-danger btn-md" href="{% url 'login' %}">Sign In!</button>
             </div>
-        </form>
-        <div class="form-outline mb-4">
-            <small class="text-muted">
-                Doesn't have account? <a class="ml-2" href="{% url 'register' %}"> Sign Up</a>
-            </small>
+
+        </div>
         </div>
     </div>
-
+    </br></br></br>
+</form>
+</body>
 {% endblock %}

@@ -8,17 +8,17 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('users', '0001_initial'),
+        ("users", "0001_initial"),
     ]
 
     operations = [
         migrations.RenameModel(
-            old_name='User_Profile',
-            new_name='UserProfile',
+            old_name="User_Profile",
+            new_name="UserProfile",
         ),
         migrations.RenameField(
-            model_name='userprofile',
-            old_name='users',
-            new_name='user',
+            model_name="userprofile",
+            old_name="users",
+            new_name="user",
         ),
     ]
