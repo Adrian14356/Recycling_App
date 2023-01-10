@@ -20,10 +20,13 @@ class TrashAddView(CreateView):
     template_name = "core/add_trash.html"
     fields = ["bucket", "description", "trash_name"]
 
-    def post(self, request, *args, **kwargs):
-        pass
-
 
 class TrashSearchView(ListView):
     model = Trash
     template_name = "core/home.html"
+
+    def post(self, request, *args, **kwargs):
+        searched = request.POST["trash_name"]
+        all_trashes = Trash.objects.filter(trash_name = searched)
+        return render(request, "core/home.html",{"searched" : searched, "all_trashes" : all_trashes })
+
