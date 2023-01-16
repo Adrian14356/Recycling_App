@@ -11,10 +11,3 @@ class RegisterView(CreateView, SuccessMessageMixin):
     success_url = reverse_lazy("login")
     form_class = UserRegistrationForm
     success_message = "You have been successful signed up!"
-
-class LoginUserView(LoginView):
-
-    template_name = "users/login.html"
-    success_url = reverse_lazy("home")
-    form_class = UserLoginForm
-    success_message = "You have been successful sign in !"
