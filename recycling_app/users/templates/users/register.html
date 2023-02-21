@@ -3,12 +3,13 @@
 {% load crispy_forms_tags %}
 {% block content %}
 {% block css %}
+
  <link rel="stylesheet" type="text/css" href="{% static 'users/register.css' %}" />
 {% endblock %}
 <body>
 
-<!-- Page Content -->
-<form method="POST" action="#">
+<div>
+<form  method="POST" action="#">
 
 {% csrf_token %}
             <h1 class='text-white'>Register</h1>
@@ -17,10 +18,7 @@
     <div class="form-group">
         <button class="btn btn-danger btn-md" type="submit">Sign Up!</button>
     </div>
-
-    <div class="border-top pt-3">
-        <button class="btn btn-danger btn-md" href="{% url 'login' %}">Sign In!</button>
-    </div>
 </form>
+    </div>
 </body>
 {% endblock %}

@@ -6,7 +6,7 @@ class BucketSerializer(serializers.Serializer):
         model = Bucket
         fields = "__all__"
 
-class TrashSerializer(serializers.Serializer):
+class TrashSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trash
         fields = "__all__"
