@@ -1,11 +1,23 @@
 {% extends "core/base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block content %}
 {% block css %}
+{% block content %}
+
 <link rel="stylesheet" type="text/css" href="{% static 'core/home.css' %}" />
 {% endblock %}
-<div class="search">
-  <input type="search" id="form1" class="form-control" placeholder="Enter the name of the item" aria-label="Search" />
-</div>
+<div>
+<form class="search" method="GET" action="#">
+  {{ form.as_p }}
+  <input name="search_term"  type="search" id="form1" class="form-control" placeholder="Enter the name of the item" aria-label="Search"/>
+</form>
+    </div>
+
+<div>
+<form class="trash">
+ {% for trash in trashes %}
+<h5>{{trash.trash_name}}: {{trash.description}}</h5>
+  {% endfor %}
+</form>
+    </div>
 {% endblock %}
