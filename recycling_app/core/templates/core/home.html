@@ -13,6 +13,10 @@
 </form>
     </div>
 
+<h1>
+    {{ search_term }}
+</h1>
+
 <div>
 <form class="trash">
  {% for trash in trashes %}
@@ -20,4 +24,5 @@
   {% endfor %}
 </form>
     </div>
+
 {% endblock %}

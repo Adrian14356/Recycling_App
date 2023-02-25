@@ -14,7 +14,20 @@
     {% endblock %}
 </head>
 <body>
+
     <header class="site-header">
+        <center>
+         <div class="col-md-8">
+             {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags}}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+             {% endif %}
+         </div>
+             </center>
+
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
                 <a class="navbar-brand mr-4" href="/">Recycling App</a>
@@ -40,18 +53,10 @@
         </nav>
     </header>
 
+
     <main role="main" class="container">
      <div class="row">
-         <div class="col-md-8">
-             {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags}}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-             {% endif %}
 
-         </div>
      </div>
         {% block content %}{% endblock %}
 </main>
