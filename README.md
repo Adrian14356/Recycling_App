@@ -37,9 +37,9 @@ into to facilitate waste segregation for people who are just starting to segrega
 <ul>
 <li>Python 3+</li>
 <li>Django</li>
-<li>DjangoRestframework</li>
-<li>Json</li>
-<li>DbSQlite3</li>
+<li>Djangorestframework</li>
+<li>json</li>
+<li>SQLite3</li>
 <li>Docker</li>
 <li>HTML, CSS, Bootstrap</li>
 </ul>
@@ -80,6 +80,6 @@ To get a local copy up and running follow these simple example steps.
 
 Email - strzelczykadrian151@gmail.com
 
-Project Link: https://github.com/Adrian14356/Subscription_App
+Project Link: https://github.com/Adrian14356/Recycling_App
 
 LinkedIn : https://www.linkedin.com/in/adrian14356/
