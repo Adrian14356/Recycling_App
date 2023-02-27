@@ -1,4 +1,4 @@
-trash_json_schema
+trash_json_schema for it is used to download data to the main application
 
 ```{
   "Bucket": [

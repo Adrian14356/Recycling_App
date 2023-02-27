@@ -5,11 +5,6 @@ from django.views.generic import CreateView
 from .forms import TrashSearchForm
 from django.contrib import messages
 
-def home(request):
-    return render(
-        request, "core/home.html", {"title": "Home", "posts": Bucket.objects.all()}
-    )
-
 class TrashSearchView(ListView):
     model = Trash
     template_name = "core/home.html"
