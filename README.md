@@ -69,7 +69,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Application View
 
-<img src="https://user-images.githubusercontent.com/88058915/187506544-85e59de7-b6fb-437e-822f-c8eb31e34810.png" width="60%" height="60%"></img>
+<img src=https://github.com/Adrian14356/Recycling_App/blob/master/Zrzut%20ekranu%202023-02-27%20o%2021.11.49.png?raw=true" width="60%" height="60%"></img>
 <img src="https://user-images.githubusercontent.com/88058915/187506798-aefe6458-3a1e-46a3-af0d-859bdba55568.png" width="60%" height="60%"></img>
 <img src="https://user-images.githubusercontent.com/88058915/187506884-0a3dc595-9ea9-41d2-aa5e-3bc9fb2c0f7a.png" width="60%" height="60%"></img>
 
