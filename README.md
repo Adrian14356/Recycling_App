@@ -69,7 +69,8 @@ To get a local copy up and running follow these simple example steps.
 
 ## Application View
 
-<img src="https://user-images.githubusercontent.com/88058915/221680915-9c3e6e11-7771-4152-8a2f-c3c949d25f70.png" width="60%" height="60%"></img>
+<img src="https://user-images.githubusercontent.com/88058915/221681262-a37c0669-ee9d-4a39-89f5-358af285b296.png" width="60%" height="60%"></img>
+<img src="https://user-images.githubusercontent.com/88058915/221681647-edffad5c-11e3-4bb6-9b53-ba3591c376e1.png" width="60%" height="60%"></img>
 <img src="https://user-images.githubusercontent.com/88058915/221681071-75914b1f-a17e-43bc-b0ea-4f20a4fb70e9.png" width="60%" height="60%"></img>
 <img src="https://user-images.githubusercontent.com/88058915/221681180-50005afc-5c89-41e8-aa8b-fb9451ff6ceb.png" width="60%" height="60%"></img>
 <img src="https://user-images.githubusercontent.com/88058915/221681262-a37c0669-ee9d-4a39-89f5-358af285b296.png" width="60%" height="60%"></img>
