@@ -1,20 +1,39 @@
 from django.test import TestCase
-from django.test.client import Client
 from django.urls import reverse
+from django.contrib.auth.models import User
 
-client = Client()
-
-class TestRegister(TestCase):
+class RegistrationTestCase(TestCase):
     def setUp(self):
-        pass
+        self.registration_url = reverse('register')
+        self.username = 'testuser'
+        self.password = 'Testpass1435!'
+        self.email = 'test@example.com'
 
-    def tearDown(self) -> None:
-        pass
+    def test_registration_form(self):
 
-    def test_should_return_200_when_user_send_request(self):
-        resp = client.get(reverse('register'))
-        code = resp.status_code
-        expected_code = 200
-        self.assertEquals(code, expected_code)
+        response = self.client.get(self.registration_url)
 
-# sprawdzic czy użytkoniwk dodaje sie do bazy danych 
+        self.assertEqual(response.status_code, 200)
+
+
+        self.assertContains(response, 'username')
+        self.assertContains(response, 'password1')
+        self.assertContains(response, 'password2')
+        self.assertContains(response, 'email')
+
+    def test_registration_process(self):
+
+        response = self.client.post(self.registration_url, {
+            'username': self.username,
+            'password1': self.password,
+            'password2': self.password,
+            'email': self.email,
+        })
+
+        self.assertRedirects(response, reverse('login'))
+
+        self.assertTrue(User.objects.filter(username=self.username).exists())
+
+        user = User.objects.get(username=self.username)
+        self.assertNotEqual(user.password, self.password)
+
