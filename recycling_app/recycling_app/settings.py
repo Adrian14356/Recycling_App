@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-from .env import DEBUG, SECRET
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET
+SECRET_KEY = str(config("SECRET_KEY"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = DEBUG
+DEBUG = bool(config("DEBUG"))
 
 ALLOWED_HOSTS = []
 
@@ -79,11 +79,23 @@ WSGI_APPLICATION = "recycling_app.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+'''
+  Uncomment section below as to connect to PostgreSQL database
+  "default": {
+      "ENGINE": "django.db.backends.postgresql",
+      "NAME": config("POSTGRES_DATABASE"),
+      "USER": config("POSTGRES_USERNAME"),
+      "PASSWORD": config("POSTGRES_PASSWORD"),
+      "HOST": config("POSTGRES_HOST"),
+      "PORT": int(config("POSTGRES_PORT_INTERNAL")),
+  }
+'''
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
-    }
+    },
 }
 
 

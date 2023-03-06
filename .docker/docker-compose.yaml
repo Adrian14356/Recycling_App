@@ -12,6 +12,8 @@ services:
         - POSTGRES_HOST=${POSTGRES_HOST}
         - POSTGRES_DATABASE=${POSTGRES_DATABASE}
         - POSTGRES_PORT_INTERNAL=${POSTGRES_PORT_INTERNAL}
+        - SECRET_KEY=${SECRET_KEY}
+        - DEBUG=${DEBUG}
       command:
         - |
           python manage.py makemigrations

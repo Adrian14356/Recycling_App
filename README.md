@@ -62,9 +62,9 @@ To get a local copy up and running follow these simple example steps.
    ```
    git clone https://github.com/github_username/repo_name.git
    ```
-2. Go to the project root directory
-   
-3. Run ```docker-compose up --build```
+2. Go to the .docker directory
+3. Provide ```.env``` file with your configuration
+4. Run ```docker-compose up --build```
 
 
 ## Application View
